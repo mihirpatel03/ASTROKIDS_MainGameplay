@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
 
 
 
+
     public float barLeftEnd;
     public float barRightEnd;
     public float barSpeed;
@@ -147,6 +148,8 @@ public class LevelManager : MonoBehaviour
             TravelledDistance.transform.position = new Vector3(barLeftEnd, TravelledDistance.transform.position.y, TravelledDistance.transform.position.z);
             restart = false;
         }
+
+
     }
 
 
