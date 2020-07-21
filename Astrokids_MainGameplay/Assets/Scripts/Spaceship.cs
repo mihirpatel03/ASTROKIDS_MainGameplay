@@ -27,6 +27,8 @@ public class Spaceship : MonoBehaviour
     [SerializeField]
     private GameObject _trailContainer;
     private float trailOffset;
+    [SerializeField]
+    private float delay = .01f;
 
     private SpawnManager _spawnManager;
 
@@ -36,6 +38,8 @@ public class Spaceship : MonoBehaviour
 
     [SerializeField]
     private AudioSource laserSound;
+
+
 
 
     // Start is called before the first frame update
@@ -123,6 +127,8 @@ public class Spaceship : MonoBehaviour
         GameObject newTrail = Instantiate(_trailPrefab, transform.position + new Vector3(-1f, trailOffset, 0), Quaternion.identity);
         newTrail.transform.parent = _trailContainer.transform;
 
+        StartCoroutine(trailDelay());
+
     }
 
     public void Damage()
@@ -138,6 +144,14 @@ public class Spaceship : MonoBehaviour
             //telling asteroids to stop spawning once the player is dead.
             _spawnManager._stopSpawning=true;
         }
+    }
+
+    IEnumerator trailDelay()
+    {
+        //function that creates a delay before restarting the level
+        //(so that the player can actually see the game over text)
+        yield return new WaitForSeconds(delay);
+
     }
 
 

@@ -51,6 +51,8 @@ public class UIManager : MonoBehaviour
     private float dividerY2;
 
 
+    private bool moveBar;
+
 
 
     // Start is called before the first frame update
@@ -85,7 +87,7 @@ public class UIManager : MonoBehaviour
         }
 
         //moves the bar as long as the spaceship is not dead and not at destination
-        if (_levelManager.TravelledDistance.transform.position.x < _levelManager.barRightEnd && _spawnManager._stopSpawning==false)
+        if (_levelManager.TravelledDistance.transform.position.x < _levelManager.barRightEnd && _spawnManager._stopSpawning==false && moveBar==true)
         {
 
             _levelManager.barSpeed = ((_levelManager.barRightEnd - _levelManager.barLeftEnd) / _levelManager.levelTime) * Time.deltaTime;
@@ -235,6 +237,18 @@ public class UIManager : MonoBehaviour
             _levelManager.restartLevel();
 
     }
+
+    public void stopBar()
+    {
+        moveBar = false;
+    }
+
+    public void startBar()
+    {
+        moveBar = true;
+    }
+
+
 
 
 }

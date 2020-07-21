@@ -21,13 +21,18 @@ public class SpawnManager : MonoBehaviour
     //value that spawn time cannot go below (so that there isn't infinite asteroids)
     private float maxSpawn;
 
+    //y value of where the asteroid spawns
+    float spawnY;
+
     [SerializeField]
     private GameObject _asteroidContainer;
 
     [SerializeField]
-    public bool _stopSpawning=false;
+    public bool _stopSpawning=true;
 
     private LevelManager _levelManager;
+
+
 
 
     // Start is called before the first frame update
@@ -36,6 +41,7 @@ public class SpawnManager : MonoBehaviour
         _levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         StartCoroutine(SpawnRoutine());
 
+        spawnY = screenEdgeHeight;
     }
 
     // Update is called once per frame
@@ -98,7 +104,7 @@ public class SpawnManager : MonoBehaviour
         while (_stopSpawning == false)
         {
             //float that represents the random y value where asteroids will spawn
-            float spawnY = Random.Range(-screenEdgeHeight, screenEdgeHeight);
+            spawnY = Random.Range(-screenEdgeHeight, screenEdgeHeight);
 
             //storing the created asteroids within asteroid container
             GameObject newAsteroid = Instantiate(_asteroidPrefab, new Vector3(screenEdgeWidth+2, spawnY, 0), Quaternion.identity);

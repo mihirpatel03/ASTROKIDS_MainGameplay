@@ -7,21 +7,30 @@ public class Background : MonoBehaviour
     [SerializeField]
     private float bgSpeed = 1f;
 
-    private LevelManager _levelManager;
+    private SpawnManager _spawnManager;
+    private UIManager _uiManager;
+    private Spaceship _spaceship;
+    private Canvas _canvas;
 
     private int bg;
 
     [SerializeField]
-    private Material background1;
+    private Texture2D background1;
 
     [SerializeField]
-    private Material mainbackground;
+    private Texture2D mainbackground;
+
+    private bool newBackground = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        _levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        bg = 2;
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        _uiManager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
+        _spaceship = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+
+        bg = 1;
     }
 
     // Update is called once per frame
@@ -30,7 +39,7 @@ public class Background : MonoBehaviour
         //updating background whenever space is pressed
         if (Input.GetKeyDown(KeyCode.Space) && bg<2)
         {
-            Debug.Log("levelChanged");
+            newBackground = true;
             bg++;
         }
 
@@ -43,18 +52,39 @@ public class Background : MonoBehaviour
 
         if (bg==1)
         {
-            Debug.Log("First");
-            mat = mainbackground;
+            //Debug.Log("First");
+            mat.mainTexture = background1;
+
+            //making the level inactive while on info screens
+            _spawnManager._stopSpawning = true;
+            //_uiManager.stopBar();
+            _canvas.gameObject.SetActive(false);
+
+            newBackground = false;
         }
 
         if (bg==2)
         {
-            Debug.Log("Second");
-            mat = mainbackground;
+            if (newBackground == true)
+            {
+                mat.mainTexture = mainbackground;
 
-            //making the background perpetually offset, making it look side-scrolling\
+                //re-activating the level now that the main background is on
+                _spawnManager._stopSpawning = false;
+                //_uiManager.startBar();
+                _spaceship._lives = 3;
+                _canvas.gameObject.SetActive(true);
+                this.gameObject.transform.position += new Vector3(0, 0, 9);
+
+                newBackground = false;
+            }
+
+            //making the background perpetually offset, making it look side-scrolling
             offset.x += Time.deltaTime / bgSpeed;
             mat.mainTextureOffset = offset;
+
+
+            
         }
 
     }

@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     public float barRightEnd;
     public float barSpeed;
 
+
     [SerializeField]
     public GameObject TravelledDistance;
     [SerializeField]
@@ -167,6 +168,8 @@ public class LevelManager : MonoBehaviour
         restart = true;
 
     }
+
+
 
 
 }
