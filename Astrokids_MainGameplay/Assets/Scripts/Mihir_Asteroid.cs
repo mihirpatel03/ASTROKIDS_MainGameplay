@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Mihir_Asteroid : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 3f;
@@ -12,7 +12,7 @@ public class Asteroid : MonoBehaviour
     [SerializeField]
     private float screenEdgeWidth = 8.5f;
 
-    private Spaceship _spaceship;
+    private Mihir_Spaceship _spaceship;
 
 
 
@@ -22,7 +22,7 @@ public class Asteroid : MonoBehaviour
     {
         //transform.position = new Vector3(0, screenEdgeHeight, 0);
 
-        _spaceship = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        _spaceship = GameObject.Find("Mihir_Spaceship").GetComponent<Mihir_Spaceship>();
 
     }
 

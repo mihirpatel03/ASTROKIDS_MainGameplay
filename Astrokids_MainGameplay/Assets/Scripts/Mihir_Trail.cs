@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trail : MonoBehaviour
+public class Mihir_Trail : MonoBehaviour
 {
 
     [SerializeField]

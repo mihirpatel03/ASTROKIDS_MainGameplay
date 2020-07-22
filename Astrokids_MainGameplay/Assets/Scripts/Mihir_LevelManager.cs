@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class LevelManager : MonoBehaviour
+public class Mihir_LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
+    public static Mihir_LevelManager Instance;
 
     public float levelTime;
 

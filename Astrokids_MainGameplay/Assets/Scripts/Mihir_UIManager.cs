@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class Mihir_UIManager : MonoBehaviour
 {
 
     [SerializeField]
     private float screenEdgeHeight = 5.5f;
 
-    private Spaceship _spaceship;
-    private LevelManager _levelManager;
-    private SpawnManager _spawnManager;
+    private Mihir_Spaceship _spaceship;
+    private Mihir_LevelManager _levelManager;
+    private Mihir_SpawnManager _spawnManager;
 
 
     [SerializeField]
@@ -58,9 +58,9 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
-        _levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        _spaceship = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        _spawnManager = GameObject.Find("Mihir_Spawn_Manager").GetComponent<Mihir_SpawnManager>();
+        _levelManager = GameObject.Find("Mihir_LevelManager").GetComponent<Mihir_LevelManager>();
+        _spaceship = GameObject.Find("Mihir_Spaceship").GetComponent<Mihir_Spaceship>();
 
 
         _livesText.text = "Lives: " + 3;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spaceship : MonoBehaviour
+public class Mihir_Spaceship : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 3f;
@@ -30,7 +30,7 @@ public class Spaceship : MonoBehaviour
     [SerializeField]
     private float delay = .01f;
 
-    private SpawnManager _spawnManager;
+    private Mihir_SpawnManager _spawnManager;
 
     [SerializeField]
     private float rotationAngle = 20;
@@ -47,7 +47,7 @@ public class Spaceship : MonoBehaviour
     {
         transform.position = new Vector3(-6f, 0, 0);
 
-        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        _spawnManager = GameObject.Find("Mihir_Spawn_Manager").GetComponent<Mihir_SpawnManager>();
 
         laserSound = GetComponent<AudioSource>();
     }

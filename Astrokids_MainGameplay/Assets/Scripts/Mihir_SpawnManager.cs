@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class Mihir_SpawnManager : MonoBehaviour
 {
     [SerializeField]
     private float screenEdgeWidth = 8.5f;
@@ -30,7 +30,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     public bool _stopSpawning=true;
 
-    private LevelManager _levelManager;
+    private Mihir_LevelManager _levelManager;
 
 
 
@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        _levelManager = GameObject.Find("Mihir_LevelManager").GetComponent<Mihir_LevelManager>();
         StartCoroutine(SpawnRoutine());
 
         spawnY = screenEdgeHeight;

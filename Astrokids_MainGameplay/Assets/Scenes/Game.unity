@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 21523741}
   - component: {fileID: 21523744}
   m_Layer: 5
-  m_Name: Divider2
+  m_Name: Mihir_Divider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 27632249}
   - component: {fileID: 27632248}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Mihir_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 303636184}
   - component: {fileID: 303636183}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Mihir_EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 350095511}
   - component: {fileID: 350095510}
   m_Layer: 5
-  m_Name: Lives_text
+  m_Name: Mihir_Lives_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 363245117}
   m_Layer: 0
-  m_Name: TrailContainer
+  m_Name: Mihir_TrailContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,7 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825389485}
   m_Layer: 0
-  m_Name: AsteroidContainer
+  m_Name: Mihir_AsteroidContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 912230921}
   - component: {fileID: 912230920}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: Mihir_LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 1046780425}
   - component: {fileID: 1046780424}
   m_Layer: 0
-  m_Name: TotalDistance
+  m_Name: Mihir_TotalDistance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 1358111253}
   - component: {fileID: 1358111252}
   m_Layer: 5
-  m_Name: Game_Over_text
+  m_Name: Mihir_Game_Over_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 1685686322}
   - component: {fileID: 1685686326}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Mihir_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 1697253740}
   - component: {fileID: 1697253741}
   m_Layer: 0
-  m_Name: UI_Manager
+  m_Name: Mihir_UI_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 1771294339}
   - component: {fileID: 1771294340}
   m_Layer: 0
-  m_Name: Spaceship
+  m_Name: Mihir_Spaceship
   m_TagString: Spaceship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,7 +1579,7 @@ GameObject:
   - component: {fileID: 1833570719}
   - component: {fileID: 1833570718}
   m_Layer: 0
-  m_Name: Spawn_Manager
+  m_Name: Mihir_Spawn_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 1881554081}
   - component: {fileID: 1881554080}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Mihir_Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,7 +1792,7 @@ GameObject:
   - component: {fileID: 1996967473}
   - component: {fileID: 1996967470}
   m_Layer: 5
-  m_Name: Divider1
+  m_Name: Mihir_Divider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 2056396729}
   - component: {fileID: 2056396728}
   m_Layer: 5
-  m_Name: TravelledDistance
+  m_Name: Mihir_TravelledDistance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

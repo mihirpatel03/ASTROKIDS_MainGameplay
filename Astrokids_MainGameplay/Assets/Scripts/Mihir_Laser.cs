@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class Mihir_Laser : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 15;
@@ -10,13 +10,13 @@ public class Laser : MonoBehaviour
     [SerializeField]
     private float screenEdge = 8.5f;
 
-    private Spaceship _spaceship;
+    private Mihir_Spaceship _spaceship;
 
     private Vector3 movement;
     // Start is called before the first frame update
     private void Start()
     {
-        _spaceship = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        _spaceship = GameObject.Find("Mihir_Spaceship").GetComponent<Mihir_Spaceship>();
 
         /*if (_spaceship.transform.rotation.z < 0)
         {
