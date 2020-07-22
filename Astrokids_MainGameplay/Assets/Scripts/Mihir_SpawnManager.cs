@@ -28,7 +28,7 @@ public class Mihir_SpawnManager : MonoBehaviour
     private GameObject _asteroidContainer;
 
     [SerializeField]
-    public bool _stopSpawning=true;
+    public bool _stopSpawning;
 
     private Mihir_LevelManager _levelManager;
 

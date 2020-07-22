@@ -80,6 +80,12 @@ public class Mihir_LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
+        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "Mihir_PlanetInfo")
+        {
+            SceneManager.LoadScene("Mihir_Game");
+        }
+
+
         if (endLevel == true)
         {
             //resetting the marker on the bar

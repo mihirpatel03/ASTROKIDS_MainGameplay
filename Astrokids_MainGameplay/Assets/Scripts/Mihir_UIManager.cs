@@ -51,7 +51,7 @@ public class Mihir_UIManager : MonoBehaviour
     private float dividerY2;
 
 
-    private bool moveBar;
+
 
 
 
@@ -87,7 +87,7 @@ public class Mihir_UIManager : MonoBehaviour
         }
 
         //moves the bar as long as the spaceship is not dead and not at destination
-        if (_levelManager.TravelledDistance.transform.position.x < _levelManager.barRightEnd && _spawnManager._stopSpawning==false && moveBar==true)
+        if (_levelManager.TravelledDistance.transform.position.x < _levelManager.barRightEnd && _spawnManager._stopSpawning==false)
         {
 
             _levelManager.barSpeed = ((_levelManager.barRightEnd - _levelManager.barLeftEnd) / _levelManager.levelTime) * Time.deltaTime;
@@ -238,15 +238,7 @@ public class Mihir_UIManager : MonoBehaviour
 
     }
 
-    public void stopBar()
-    {
-        moveBar = false;
-    }
 
-    public void startBar()
-    {
-        moveBar = true;
-    }
 
 
 
