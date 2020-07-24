@@ -82,18 +82,15 @@ public class Mihir_LevelManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "Mihir_PlanetInfo")
         {
-            SceneManager.LoadScene("Mihir_Game");
-        }
-
-
-        if (endLevel == true)
-        {
             //resetting the marker on the bar
             TravelledDistance.transform.position = new Vector3(barLeftEnd, TravelledDistance.transform.position.y, TravelledDistance.transform.position.z);
 
-            //moving to the next level and loading it
-            level++;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (level>=1)
+            {
+                level++;
+            }
+
+            SceneManager.LoadScene("Mihir_Game");
             Debug.Log("level " + level);
 
             //changing the leveltime based on which level is the current
@@ -140,7 +137,12 @@ public class Mihir_LevelManager : MonoBehaviour
 
             TotalDistance.gameObject.SetActive(true);
             TravelledDistance.gameObject.SetActive(true);
+        }
 
+
+        if (endLevel == true)
+        {
+            SceneManager.LoadScene("Mihir_PlanetInfo");
 
             endLevel = false;
 
